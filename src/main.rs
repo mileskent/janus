@@ -25,16 +25,21 @@ impl Date {
     }
 }
 
+#[derive(Debug)]
 struct Event {
-    date: Date,
+    start_date: Date,
+    end_date: Date,
+    title: String,
+    description: String
+}
+
+
+#[derive(Debug)]
+struct Task {
+    due_date: Date,
     title: String,
     description: String
 }
 
 fn main() {
-    let t: Time = Time {hour: 10, minute: 30};
-    println!("{:#?}", t);
-    let d: Date = Date {year: 2024, month: 7, time: t};
-    println!("{:#?}", d);
-    println!("{}", d.month_string());
 }
